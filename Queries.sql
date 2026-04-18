@@ -3,45 +3,6 @@ use logistics_db;
 
 
 
--- UNDERSTAINDING DATA -- 
-SELECT * FROM customers
-limit 100;
-
-SELECT * FROM delivery_events
-limit 100;
-
-select * from driver_monthly_metrics
-limit 100;
-
-SELECT * FROM drivers
-limit 100;
-
-SELECT * FROM facilities
-limit 100;
-
-SELECT * FROM fuel_purchases
-limit 100;
-
-SELECT * FROM loads
-limit 100;
-
-SELECT * FROM maintenance_records
-limit 100;
-
-SELECT * FROM routes
-limit 100;
-
-SELECT * FROM trailers
-limit 100;
-
-SELECT * FROM trips
-limit 100;
-
-SELECT * FROM truck_utilization_metrics
-limit 100;
-
-SELECT * FROM trucks
-limit 100;
 
 -- Delayed Pickup/Deliver --
 select on_time_flag,count(*) as total, round(count(*) * 100 / sum(count(*)) over (), 2) as percent from delivery_events 
